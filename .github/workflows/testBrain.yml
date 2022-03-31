@@ -1,8 +1,10 @@
 name: Brain-Games CI
 
 on:
-  - push
-  - pull_request
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build:
@@ -10,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [16.14.2]
 
     steps:
       - uses: actions/checkout@v2
