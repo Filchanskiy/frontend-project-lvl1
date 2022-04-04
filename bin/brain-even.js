@@ -27,7 +27,7 @@ const randomNumber = () => {
     }
   }
   if (counterOfAnswer === 4) {
-    console.log(`Congratulations, ${userName}!`);
+    console.log(`Congratulation ${userName}!`);
   }
 };
 
