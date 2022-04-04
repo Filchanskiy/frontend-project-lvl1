@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import userName from '../src/cli.js';
+import askNameGreeting from '../src/games/cli.js';
 
-console.log(`Hello, ${userName}!`);
+askNameGreeting();
