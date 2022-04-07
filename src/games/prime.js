@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import startGames from '../index.js';
+import { startGames, right } from '../index.js';
 
 const userName = startGames();
 console.log(`Hello, ${userName}!`);
@@ -32,7 +32,7 @@ const israndomNumberPrime = () => {
     console.log(`Question: ${randomNumber}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === trueAnswer && counterOfAnswers <= 3) {
-      console.log('Correct!');
+      console.log(right);
       counterOfAnswers += 1;
     } else if (answer !== trueAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'. \nLet's try again, ${userName}!`);

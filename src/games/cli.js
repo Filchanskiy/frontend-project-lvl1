@@ -1,4 +1,4 @@
-import startGames from '../index.js';
+import { startGames } from '../index.js';
 
 const askNameGreeting = () => {
   const userName = startGames();

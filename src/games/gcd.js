@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import startGames from '../index.js';
+import { startGames, right } from '../index.js';
 
 const userName = startGames();
 console.log(`Hello, ${userName}!`);
@@ -22,7 +22,7 @@ const greatestCommonDivisor = () => {
     console.log(`Question: ${firstNumber} ${secondNumber}`);
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) === carrentAnswer && counterOfAnswers <= 3) {
-      console.log('Correct!');
+      console.log(right);
       counterOfAnswers += 1;
     } else if (answer !== carrentAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${carrentAnswer}'. \nLet's try again, ${userName}!`);
