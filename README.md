@@ -45,3 +45,16 @@ $ make brain-calc
 >### Пример неудачи в игре:
 <a href="https://ibb.co/82qsCdq"><img src="https://i.ibb.co/vmpqFQp/uncorrect-Answer-Calc.jpg" alt="uncorrect-Answer-Calc" border="0"></a>
 ___
+
+## Игра №3. «Наибольший общий делитель (НОД)»
+Для того, чтобы начать введите:
+```
+$ make brain-gcd
+```
+Задача найти наибольший общий делитель двух случайных чисел, предоставленных игрой.
+>### Пример победы в игре:
+<a href="https://ibb.co/2tMBqfp"><img src="https://i.ibb.co/QNHG91x/correct-Answer-Gcd.jpg" alt="correct-Answer-Gcd" border="0"></a>
+
+>### Пример неудачи в игре:
+<a href="https://ibb.co/tQGv88h"><img src="https://i.ibb.co/7jfZ22z/uncorrect-Answer-Gcd.jpg" alt="uncorrect-Answer-Gcd" border="0"></a>
+___
