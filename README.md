@@ -49,7 +49,7 @@ ___
 ## Игра №3. «Наибольший общий делитель (НОД)»
 Для того, чтобы начать введите:
 ```
-$ make brain-gcd
+$ make brain-progression
 ```
 Задача найти наибольший общий делитель двух случайных чисел, предоставленных игрой.
 >### Пример победы в игре:
@@ -57,4 +57,18 @@ $ make brain-gcd
 
 >### Пример неудачи в игре:
 <a href="https://ibb.co/tQGv88h"><img src="https://i.ibb.co/7jfZ22z/uncorrect-Answer-Gcd.jpg" alt="uncorrect-Answer-Gcd" border="0"></a>
+___
+
+## Игра №4 «Арифметическая прогрессия»
+Для того, чтобы начать введите:
+```
+$ make brain-gcd
+```
+Игра показывает игроку ряд случаныйх чисел, образующих арифметическую прогрессию, заменив одно из числе двумя точками.</br>
+Задача игрока определить пропущенное число.
+>### Пример победы в игре:
+<a href="https://ibb.co/D9fqpZW"><img src="https://i.ibb.co/K2x1wJh/correct-Answer-Progression.jpg" alt="correct-Answer-Progression" border="0"></a>
+
+>### Пример неудачи в игре:
+<a href="https://ibb.co/hF3rhfX"><img src="https://i.ibb.co/TM9JpLK/uncorrect-Answer-Progression.jpg" alt="uncorrect-Answer-Progression" border="0"></a>
 ___
