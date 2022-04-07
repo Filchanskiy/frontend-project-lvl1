@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import {startGames, right } from '../index.js';
+import { startGames, right } from '../index.js';
 
 const userName = startGames();
 console.log(`Hello, ${userName}!`);
