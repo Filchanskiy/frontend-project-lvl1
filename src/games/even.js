@@ -29,7 +29,7 @@ const randomNumber = () => {
     }
   }
   if (counterOfAnswers === 4) {
-    console.log(`Congratulation ${userName}!`);
+    console.log(`Congratulations ${userName}!`);
   }
 };
 export default randomNumber;
