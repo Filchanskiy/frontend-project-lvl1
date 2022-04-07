@@ -6,3 +6,6 @@
 
 ## Серия игр Brain-games :brain:
 ## Setup
+1. Необходимо склонировать репозиторий `git@github.com:Filchanskiy/frontend-project-lvl1.git`
+2. Введите команду :
+>make install
