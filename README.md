@@ -59,7 +59,7 @@ $ make brain-gcd
 <a href="https://ibb.co/tQGv88h"><img src="https://i.ibb.co/7jfZ22z/uncorrect-Answer-Gcd.jpg" alt="uncorrect-Answer-Gcd" border="0"></a>
 ___
 
-## Игра №4 «Арифметическая прогрессия»
+## Игра №4. «Арифметическая прогрессия»
 Для того, чтобы начать введите:
 ```
 $ make brain-progression
@@ -71,4 +71,19 @@ $ make brain-progression
 
 >### Пример неудачи в игре:
 <a href="https://ibb.co/hF3rhfX"><img src="https://i.ibb.co/TM9JpLK/uncorrect-Answer-Progression.jpg" alt="uncorrect-Answer-Progression" border="0"></a>
+___
+
+## Игра №5. «Простое ли число?»
+Для того, чтобы начать введите:
+```
+$ make brain-prime
+```
+Задача пользователя: определить, является ли случайное число простым.</br>
+Если число, выбранное игрой, простое - ответить `yes`.</br>
+В ином случает ответ должем быть `no`.
+>### Пример победы в игре:
+<a href="https://ibb.co/sH8xvhv"><img src="https://i.ibb.co/rsD8GgG/correct-Answer-Prime.jpg" alt="correct-Answer-Prime" border="0"></a>
+
+>### Пример неудачи в игре:
+<a href="https://ibb.co/4Zp12H8"><img src="https://i.ibb.co/QFMDk4P/uncorrect-Answer-Prime.jpg" alt="uncorrect-Answer-Prime" border="0"></a>
 ___
