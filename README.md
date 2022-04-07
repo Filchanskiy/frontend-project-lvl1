@@ -7,7 +7,10 @@
 # Серия игр Brain-games :brain:
 ## Setup:
 1. Необходимо склонировать репозиторий `git@github.com:Filchanskiy/frontend-project-lvl1.git`
-2. Введите команду :
+```
+$ git clone git@github.com:Filchanskiy/frontend-project-lvl1.git
+```
+2. Введите команду в терминале:
 ```
 $ make install
 ```
@@ -15,8 +18,8 @@ $ make install
 
 ___
 
-## Первая игра: «Проверка на чётность числа»
-Для того, чтоб начать введите:
+## Игра №1. «Проверка на чётность числа»
+Для того, чтобы начать введите:
 ```
 $ make brain-even
 ```
@@ -28,4 +31,17 @@ $ make brain-even
 
 >### Пример неудачи в игре:
 <a href="https://ibb.co/k6Jjfb4"><img src="https://i.ibb.co/dJtFqCP/uncorrect-Answer-Even.jpg" alt="uncorrect-Answer-Even" border="0"></a>
+___
+
+## Игра №2. «Калькулятор»
+Для того, чтобы начать введите:
+```
+$ make brain-calc
+```
+Все просто - необходимо произвести вычисление двух случайных чисел, которые игра выдаст пользователю.
+>### Пример победы в игре:
+<a href="https://ibb.co/WnMmQw0"><img src="https://i.ibb.co/v1T0bGh/correct-Answer-Calc.jpg" alt="correct-Answer-Calc" border="0"></a>
+
+>### Пример неудачи в игре:
+<a href="https://ibb.co/82qsCdq"><img src="https://i.ibb.co/vmpqFQp/uncorrect-Answer-Calc.jpg" alt="uncorrect-Answer-Calc" border="0"></a>
 ___
