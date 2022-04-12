@@ -1,15 +1,16 @@
-import readlineSync from 'readline-sync';
-import { startGames, right } from '../index.js';
+import {
+  startGames, right, firstTask, askAnswer,
+} from '../index.js';
 
 const userName = startGames();
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+firstTask();
 
 const randomNumber = () => {
   let counterOfAnswers = 1;
   while (counterOfAnswers <= 3) {
     const number = Math.floor(Math.random() * 100);
     console.log(`Question: ${number}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = askAnswer();
     const wrongAnswer1 = `\n${answer} is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`;
     const wrongAnswer2 = `\n${answer} is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`;
 

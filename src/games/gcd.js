@@ -1,8 +1,9 @@
-import readlineSync from 'readline-sync';
-import { startGames, right } from '../index.js';
+import {
+  startGames, right, thirdTask, askAnswer,
+} from '../index.js';
 
 const userName = startGames();
-console.log('Find the greatest common divisor of given numbers.');
+thirdTask();
 
 const Divisor = (x, y) => {
   if (y > x) return Divisor(y, x);
@@ -19,7 +20,7 @@ const greatestCommonDivisor = () => {
     const carrentAnswer = Divisor(firstNumber, secondNumber);
 
     console.log(`Question: ${firstNumber} ${secondNumber}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = askAnswer();
     if (Number(answer) === carrentAnswer && counterOfAnswers <= 3) {
       console.log(right);
       counterOfAnswers += 1;

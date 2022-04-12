@@ -1,8 +1,9 @@
-import readlineSync from 'readline-sync';
-import { startGames, right } from '../index.js';
+import {
+  startGames, right, fifthTask, askAnswer,
+} from '../index.js';
 
 const userName = startGames();
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+fifthTask();
 let counterOfAnswers = 1;
 let trueAnswer;
 
@@ -29,7 +30,7 @@ const israndomNumberPrime = () => {
     const randomNumber = 1 + Math.ceil(Math.random() * 50);
     Prime(randomNumber);
     console.log(`Question: ${randomNumber}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = askAnswer();
     if (answer === trueAnswer && counterOfAnswers <= 3) {
       console.log(right);
       counterOfAnswers += 1;

@@ -1,8 +1,9 @@
-import readlineSync from 'readline-sync';
-import { startGames, right } from '../index.js';
+import {
+  startGames, right, fourthTask, askAnswer,
+} from '../index.js';
 
 const userName = startGames();
-console.log('What number is missing in the progression?');
+fourthTask();
 
 let trueAnswer;
 let counterOfAnswers = 1;
@@ -29,7 +30,7 @@ const missingNumberInAP = () => {
     arithmeticProgression(0);
     trueAnswer = String(trueAnswer);
     console.log(`Question: ${array.join(' ')}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = askAnswer();
     if (answer === trueAnswer && counterOfAnswers <= 3) {
       console.log(right);
       counterOfAnswers += 1;
