@@ -14,4 +14,5 @@ export const askAnswer = () => {
   return answer;
 };
 
-export const firstQuestion = () => console.log('What is the result of the expression?'); // Вопрос к первому заданию.
+export const firstQuestion = () => console.log('Answer "yes" if the number is even, otherwise answer "no".'); // Вопрос к первому заданию.
+export const secondQuestion = () => console.log('What is the result of the expression?'); // Вопрос ко второму заданию.
