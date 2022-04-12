@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync';
 import { startGames, right } from '../index.js';
 
 const userName = startGames();
-console.log(`Hello, ${userName}!`);
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 let counterOfAnswers = 1;
 let trueAnswer;

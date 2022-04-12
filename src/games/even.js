@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync';
 import { startGames, right } from '../index.js';
 
 const userName = startGames();
-console.log(`Hello, ${userName}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const randomNumber = () => {

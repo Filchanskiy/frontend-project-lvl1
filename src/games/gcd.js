@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync';
 import { startGames, right } from '../index.js';
 
 const userName = startGames();
-console.log(`Hello, ${userName}!`);
 console.log('Find the greatest common divisor of given numbers.');
 
 const Divisor = (x, y) => {
