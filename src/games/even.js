@@ -15,10 +15,10 @@ const randomNumber = () => {
     const wrongAnswer2 = `\n${answer} is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`;
 
     if (number % 2 === 0 && answer === 'yes' && counterOfAnswers <= 3) {
-      console.log(right);
+      right();
       counterOfAnswers += 1;
     } else if (number % 2 !== 0 && answer === 'no' && counterOfAnswers <= 3) {
-      console.log(right);
+      right();
       counterOfAnswers += 1;
     } else if (number % 2 === 0 && answer !== 'yes') {
       console.log(wrongAnswer2);

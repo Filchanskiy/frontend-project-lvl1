@@ -35,7 +35,7 @@ const randomCalculator = () => {
     const answer = askAnswer();
 
     if (Number(answer) === result && counterOfAnswer <= 3) {
-      console.log(right);
+      right();
       counterOfAnswer += 1;
     } else if (answer !== result) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`);

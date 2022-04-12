@@ -32,7 +32,7 @@ const missingNumberInAP = () => {
     console.log(`Question: ${array.join(' ')}`);
     const answer = askAnswer();
     if (answer === trueAnswer && counterOfAnswers <= 3) {
-      console.log(right);
+      right();
       counterOfAnswers += 1;
     } else if (answer !== trueAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'. \nLet's try again, ${userName}!`);

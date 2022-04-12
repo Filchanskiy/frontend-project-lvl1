@@ -22,7 +22,7 @@ const greatestCommonDivisor = () => {
     console.log(`Question: ${firstNumber} ${secondNumber}`);
     const answer = askAnswer();
     if (Number(answer) === carrentAnswer && counterOfAnswers <= 3) {
-      console.log(right);
+      right();
       counterOfAnswers += 1;
     } else if (answer !== carrentAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${carrentAnswer}'. \nLet's try again, ${userName}!`);
