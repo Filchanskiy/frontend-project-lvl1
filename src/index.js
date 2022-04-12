@@ -14,5 +14,8 @@ export const askAnswer = () => {
   return answer;
 };
 
-export const firstQuestion = () => console.log('Answer "yes" if the number is even, otherwise answer "no".'); // Вопрос к первому заданию.
-export const secondQuestion = () => console.log('What is the result of the expression?'); // Вопрос ко второму заданию.
+export const firstTask = () => console.log('Answer "yes" if the number is even, otherwise answer "no".'); // Задание к первой игре.
+export const secondTask = () => console.log('What is the result of the expression?'); // Задание ко второй игре.
+export const thirdTask = () => console.log('Find the greatest common divisor of given numbers.'); // Задание к третьей игре.
+export const fourthTask = () => console.log('What number is missing in the progression?'); // Задание к четвертой игре.
+export const fifthTask = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no".'); // Задание к пятой игре.
