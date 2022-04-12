@@ -1,9 +1,9 @@
 import {
-  startGames, right, firstQuestion, askAnswer,
+  startGames, right, secondTask, askAnswer,
 } from '../index.js';
 
 const userName = startGames();
-firstQuestion();
+secondTask();
 const randomCalculator = () => {
   let counterOfAnswer = 1;
   let result = 1;
