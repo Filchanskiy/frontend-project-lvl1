@@ -7,7 +7,7 @@ export const startGames = () => {
   console.log(`Hello, ${userName}!`);
   return userName;
 };
-export const right = 'Correct!';
+export const right = () => console.log('Correct!');
 
 export const askAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
