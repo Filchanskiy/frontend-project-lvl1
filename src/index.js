@@ -7,6 +7,7 @@ export const startGames = () => {
   console.log(`Hello, ${userName}!`);
   return userName;
 };
+
 export const right = () => console.log('Correct!');
 
 export const askAnswer = () => {
