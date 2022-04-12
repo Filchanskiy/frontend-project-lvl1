@@ -1,5 +1,5 @@
 import {
-  startGames, right, thirdTask, askAnswer,
+  startGames, right, thirdTask, askAnswer, congratulations,
 } from '../index.js';
 
 const userName = startGames();
@@ -30,7 +30,7 @@ const greatestCommonDivisor = () => {
     }
   }
   if (counterOfAnswers === 4) {
-    console.log(`Congratulations, ${userName}!`);
+    congratulations(userName);
   }
 };
 

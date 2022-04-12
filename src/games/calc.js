@@ -1,5 +1,5 @@
 import {
-  startGames, right, secondTask, askAnswer,
+  startGames, right, secondTask, askAnswer, congratulations,
 } from '../index.js';
 
 const userName = startGames();
@@ -44,7 +44,7 @@ const randomCalculator = () => {
   }
 
   if (counterOfAnswer === 4) {
-    console.log(`Congratulations, ${userName}!`);
+    congratulations(userName);
   }
 };
 

@@ -1,5 +1,5 @@
 import {
-  startGames, right, fifthTask, askAnswer,
+  startGames, right, fifthTask, askAnswer, congratulations,
 } from '../index.js';
 
 const userName = startGames();
@@ -39,7 +39,7 @@ const israndomNumberPrime = () => {
       counterOfAnswers += 4;
     }
     if (counterOfAnswers === 4) {
-      console.log(`Congratulations, ${userName}!`);
+      congratulations(userName);
     }
   }
 };

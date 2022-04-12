@@ -1,5 +1,5 @@
 import {
-  startGames, right, fourthTask, askAnswer,
+  startGames, right, fourthTask, askAnswer, congratulations,
 } from '../index.js';
 
 const userName = startGames();
@@ -40,7 +40,7 @@ const missingNumberInAP = () => {
     }
   }
   if (counterOfAnswers === 4) {
-    console.log(`Congratulations, ${userName}!`);
+    congratulations(userName);
   }
 };
 
