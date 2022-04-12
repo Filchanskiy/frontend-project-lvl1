@@ -1,10 +1,9 @@
-import readlineSync from 'readline-sync';
-import { startGames, right } from '../index.js';
+import {
+  startGames, right, firstQuestion, askAnswer,
+} from '../index.js';
 
 const userName = startGames();
-console.log(`Hello, ${userName}!`);
-console.log('What is the result of the expression?');
-
+firstQuestion();
 const randomCalculator = () => {
   let counterOfAnswer = 1;
   let result = 1;
@@ -28,7 +27,7 @@ const randomCalculator = () => {
       result = firstNum * secondNum;
     }
 
-    const answer = readlineSync.question('Your answer: ');
+    const answer = askAnswer();
 
     if (Number(answer) === result && counterOfAnswer <= 3) {
       console.log(right);
