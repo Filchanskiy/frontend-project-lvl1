@@ -16,15 +16,20 @@ const randomCalculator = () => {
       firstNum * secondNum];
     const index = Math.floor(Math.random() * array.length);
 
-    if (index === 0) {
-      console.log(`Question: ${firstNum} + ${secondNum}`);
-      result = firstNum + secondNum;
-    } else if (index === 1) {
-      console.log(`Question: ${firstNum} - ${secondNum}`);
-      result = firstNum - secondNum;
-    } else if (index === 2) {
-      console.log(`Question: ${firstNum} * ${secondNum}`);
-      result = firstNum * secondNum;
+    switch (index) {
+      case 0:
+        console.log(`Question: ${firstNum} + ${secondNum}`);
+        result = firstNum + secondNum;
+        break;
+      case 1:
+        console.log(`Question: ${firstNum} - ${secondNum}`);
+        result = firstNum - secondNum;
+        break;
+      case 2:
+        console.log(`Question: ${firstNum} * ${secondNum}`);
+        result = firstNum * secondNum;
+        break;
+      default:
     }
 
     const answer = askAnswer();
