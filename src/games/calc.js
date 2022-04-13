@@ -1,51 +1,28 @@
-import {
-  startGames, right, secondTask, askAnswer, congratulations,
-} from '../index.js';
+import { startGames, randomNumber } from '../index.js';
 
-const userName = startGames();
-secondTask();
-const randomCalculator = () => {
-  let counterOfAnswer = 1;
-  let result = 1;
+const task = 'What is the result of the expression?';
 
-  while (counterOfAnswer <= 3) {
-    const firstNum = Math.floor(Math.random() * 20);
-    const secondNum = Math.floor(Math.random() * 20);
-    const array = [firstNum + secondNum,
-      firstNum - secondNum,
-      firstNum * secondNum];
-    const index = Math.floor(Math.random() * array.length);
-
-    switch (index) {
-      case 0:
-        console.log(`Question: ${firstNum} + ${secondNum}`);
-        result = firstNum + secondNum;
-        break;
-      case 1:
-        console.log(`Question: ${firstNum} - ${secondNum}`);
-        result = firstNum - secondNum;
-        break;
-      case 2:
-        console.log(`Question: ${firstNum} * ${secondNum}`);
-        result = firstNum * secondNum;
-        break;
-      default:
-    }
-
-    const answer = askAnswer();
-
-    if (Number(answer) === result && counterOfAnswer <= 3) {
-      right();
-      counterOfAnswer += 1;
-    } else if (answer !== result) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`);
-      counterOfAnswer += 4;
-    }
-  }
-
-  if (counterOfAnswer === 4) {
-    congratulations(userName);
+const calculator = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    default:
+      return num1 * num2;
   }
 };
+
+const game = () => {
+  const firstNum = randomNumber(1, 20);
+  const secondNum = randomNumber(1, 20);
+  const operators = ['+', '-', '*'];
+  const arrOperators = operators[randomNumber(0, 3)];
+  const question = `${firstNum} ${arrOperators} ${secondNum}`;
+  const answer = String(calculator(firstNum, secondNum, arrOperators));
+  return [question, answer];
+};
+
+const randomCalculator = () => startGames(task, game);
 
 export default randomCalculator;
