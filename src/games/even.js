@@ -1,35 +1,21 @@
-import {
-  startGames, right, firstTask, askAnswer, congratulations,
-} from '../index.js';
+import { startGames, randomNumber } from '../index.js';
 
-const userName = startGames();
-firstTask();
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const randomNumber = () => {
-  let counterOfAnswers = 1;
-  while (counterOfAnswers <= 3) {
-    const number = Math.floor(Math.random() * 100);
-    console.log(`Question: ${number}`);
-    const answer = askAnswer();
-    const wrongAnswer1 = `\n${answer} is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`;
-    const wrongAnswer2 = `\n${answer} is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`;
-
-    if (number % 2 === 0 && answer === 'yes' && counterOfAnswers <= 3) {
-      right();
-      counterOfAnswers += 1;
-    } else if (number % 2 !== 0 && answer === 'no' && counterOfAnswers <= 3) {
-      right();
-      counterOfAnswers += 1;
-    } else if (number % 2 === 0 && answer !== 'yes') {
-      console.log(wrongAnswer2);
-      counterOfAnswers += 4;
-    } else if (number % 2 !== 0 && answer !== 'no') {
-      console.log(wrongAnswer1);
-      counterOfAnswers += 4;
-    }
+const even = (num) => {
+  if (num % 2 === 0) {
+    return 'yes';
   }
-  if (counterOfAnswers === 4) {
-    congratulations(userName);
-  }
+  return 'no';
 };
-export default randomNumber;
+
+const game = () => {
+  const number = randomNumber(1, 100);
+  const question = number;
+  const answer = String(even(question));
+  return [question, answer];
+};
+
+const evenNumber = () => startGames(task, game);
+
+export default evenNumber;
