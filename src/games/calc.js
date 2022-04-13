@@ -8,8 +8,10 @@ const calculator = (num1, num2, operator) => {
       return num1 + num2;
     case '-':
       return num1 - num2;
-    default:
+    case '*':
       return num1 * num2;
+    default:
+      return 'something is wrong';
   }
 };
 
