@@ -17,4 +17,5 @@ const game = () => {
 };
 
 const greatestCommonDivisor = () => startGames(rule, game);
+
 export default greatestCommonDivisor;
