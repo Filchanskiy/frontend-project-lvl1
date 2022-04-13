@@ -1,46 +1,25 @@
-import {
-  startGames, right, fifthTask, askAnswer, congratulations,
-} from '../index.js';
+import { startGames, randomNumber } from '../index.js';
 
-const userName = startGames();
-fifthTask();
-let counterOfAnswers = 1;
-let trueAnswer;
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const Prime = (number) => {
-  let i = 0;
-  let b = 0;
-  while (i !== number) {
-    i += 1;
+const prime = (number) => {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i <= number / 2; i += 1) {
     if (number % i === 0) {
-      b += 1;
+      return false;
     }
   }
-  if (b < 3) {
-    trueAnswer = 'yes';
-  }
-  if (b > 2) {
-    trueAnswer = 'no';
-  }
-  return trueAnswer;
+  return true;
 };
 
-const israndomNumberPrime = () => {
-  while (counterOfAnswers <= 3) {
-    const randomNumber = 1 + Math.ceil(Math.random() * 50);
-    Prime(randomNumber);
-    console.log(`Question: ${randomNumber}`);
-    const answer = askAnswer();
-    if (answer === trueAnswer && counterOfAnswers <= 3) {
-      right();
-      counterOfAnswers += 1;
-    } else if (answer !== trueAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'. \nLet's try again, ${userName}!`);
-      counterOfAnswers += 4;
-    }
-    if (counterOfAnswers === 4) {
-      congratulations(userName);
-    }
-  }
+const game = () => {
+  const number = randomNumber(1, 100);
+  const question = number;
+  const answer = prime(question) ? 'yes' : 'no';
+  return [question, answer];
 };
+
+const israndomNumberPrime = () => startGames(rule, game);
 export default israndomNumberPrime;

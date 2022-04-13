@@ -1,47 +1,34 @@
-import {
-  startGames, right, fourthTask, askAnswer, congratulations,
-} from '../index.js';
+import { startGames, randomNumber } from '../index.js';
 
-const userName = startGames();
-fourthTask();
+const rule = 'What number is missing in the progression?';
 
-let trueAnswer;
-let counterOfAnswers = 1;
-const array = [];
-
-const arithmeticProgression = (zero) => {
-  array.length = zero;
-  const startNum = Math.floor(Math.random() * 30);
-  const stepOfProgression = Math.floor(Math.random() * 10);
-  let stepCount = startNum;
-  array.push(stepCount);
-  for (let i = 0; i < 10; i += 1) {
-    stepCount += stepOfProgression;
-    array.push(stepCount);
+const prog = (start, length, step) => {
+  const array = [];
+  for (let i = 0; i < length; i += 1) {
+    array.push(start + step * i);
   }
-  const indexArray = Math.floor(Math.random() * 10);
-  trueAnswer = array[indexArray];
-  array[indexArray] = '..';
-  return array.join(' ');
+  return array;
 };
 
-const missingNumberInAP = () => {
-  while (counterOfAnswers <= 3) {
-    arithmeticProgression(0);
-    trueAnswer = String(trueAnswer);
-    console.log(`Question: ${array.join(' ')}`);
-    const answer = askAnswer();
-    if (answer === trueAnswer && counterOfAnswers <= 3) {
-      right();
-      counterOfAnswers += 1;
-    } else if (answer !== trueAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'. \nLet's try again, ${userName}!`);
-      counterOfAnswers += 4;
-    }
-  }
-  if (counterOfAnswers === 4) {
-    congratulations(userName);
-  }
+const progressionWithMiss = (progression, item) => {
+  const newProg = progression.slice(0);
+  const newItem = item;
+  newProg[newItem] = '..';
+  return newProg.join(' ');
 };
+
+const game = () => {
+  const number = randomNumber(1, 10);
+  const randomStep = randomNumber(1, 10);
+  const progLength = 10;
+  const randomMiss = randomNumber(1, progLength);
+  const progression = prog(number, progLength, randomStep);
+  const question = progressionWithMiss(progression, randomMiss);
+  const delElement = number + (randomStep * randomMiss);
+  const answer = String(delElement);
+  return [question, answer];
+};
+
+const missingNumberInAP = () => startGames(rule, game);
 
 export default missingNumberInAP;
