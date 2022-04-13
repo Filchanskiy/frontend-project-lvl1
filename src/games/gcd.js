@@ -1,37 +1,20 @@
-import {
-  startGames, right, thirdTask, askAnswer, congratulations,
-} from '../index.js';
+import { startGames, randomNumber } from '../index.js';
 
-const userName = startGames();
-thirdTask();
+const rule = 'Find the greatest common divisor of given numbers.';
 
-const Divisor = (x, y) => {
-  if (y > x) return Divisor(y, x);
+const divisor = (x, y) => {
+  if (y > x) return divisor(y, x);
   if (!y) return x;
-  return Divisor(y, x % y);
+  return divisor(y, x % y);
 };
 
-const greatestCommonDivisor = () => {
-  let counterOfAnswers = 1;
-  while (counterOfAnswers <= 3) {
-    const firstNumber = Math.floor(Math.random() * 100);
-    const secondNumber = Math.floor(Math.random() * 100);
-
-    const carrentAnswer = Divisor(firstNumber, secondNumber);
-
-    console.log(`Question: ${firstNumber} ${secondNumber}`);
-    const answer = askAnswer();
-    if (Number(answer) === carrentAnswer && counterOfAnswers <= 3) {
-      right();
-      counterOfAnswers += 1;
-    } else if (answer !== carrentAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${carrentAnswer}'. \nLet's try again, ${userName}!`);
-      counterOfAnswers += 4;
-    }
-  }
-  if (counterOfAnswers === 4) {
-    congratulations(userName);
-  }
+const game = () => {
+  const firstNumber = randomNumber(1, 100);
+  const secondNumber = randomNumber(1, 100);
+  const question = `${firstNumber} ${secondNumber}`;
+  const answer = String(divisor(firstNumber, secondNumber));
+  return [question, answer];
 };
 
+const greatestCommonDivisor = () => startGames(rule, game);
 export default greatestCommonDivisor;
