@@ -20,5 +20,5 @@ export const startGames = (task, game) => {
       return;
     }
   }
-  console.log(`Congratulations, ${userName}`);
+  console.log(`Congratulations, ${userName}!`);
 };
