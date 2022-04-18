@@ -18,8 +18,8 @@ const calculator = (num1, num2, operator) => {
 const game = () => {
   const firstNum = randomNumber(1, 20);
   const secondNum = randomNumber(1, 20);
-  const operators = ['+', '-', '*', '%'];
-  const arrOperators = operators[randomNumber(0, 4)];
+  const operators = ['+', '-', '*'];
+  const arrOperators = operators[randomNumber(0, 3)];
   const question = `${firstNum} ${arrOperators} ${secondNum}`;
   const answer = String(calculator(firstNum, secondNum, arrOperators));
   return [question, answer];
